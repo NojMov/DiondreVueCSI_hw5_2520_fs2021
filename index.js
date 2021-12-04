@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = new express();
 
+//Global counter
+var i = 0;
 
 // body parser
 app.use(express.json());
@@ -33,14 +35,24 @@ app.get('/trivia', (req, res) => {
     res.render('../views/trivia.ejs')
 });
 
-app.get('/idek', (req, res) => {
-    let i = 0;
-    let ans1 = document.getElementById("a1").value;
-    let ans2 = document.getElementById("a2").value;
-    let ans3 = document.getElementById("a3").value;
-    let ans4 = document.getElementById("a4").value;
-    let ans5 = document.getElementById("a5").value;
-    let ans6 = document.getElementById("a6").value;
+app.post('/idek', (req, res) => {
+    
+}
+
+app.post('/idek', (req, res) => {
+    
+    // let ans1 = document.getElementById("a1").value;
+    // let ans2 = document.getElementById("a2").value;
+    // let ans3 = document.getElementById("a3").value;
+    // let ans4 = document.getElementById("a4").value;
+    // let ans5 = document.getElementById("a5").value;
+    // let ans6 = document.getElementById("a6").value;
+    let ans1 = { answer: req.body.a1}
+    let ans2 = { answer: req.body.a2}
+    let ans3 = { answer: req.body.a3}
+    let ans4 = { answer: req.body.a4}
+    let ans5 = { answer: req.body.a5}
+    let ans6 = { answer: req.body.a6}
 
     if(ans1 = 3){
         i++;
@@ -62,11 +74,11 @@ app.get('/idek', (req, res) => {
         i++;
     }
 
-    if(ans6.toLowercase = "yes"){
+    if(ans6.toLowercase == "yes"){
         i++;
     }
 
-    res.send(i)
+    res.send(`you got ` + i + ` out of 6 questions right. tahnk you for playing`)
 });
 
 //start server
