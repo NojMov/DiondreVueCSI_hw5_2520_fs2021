@@ -1,3 +1,8 @@
+body{
+    background-color: rgb(248, 230, 209);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 h1{
     text-align: center;
     font-size: 50px;
@@ -7,13 +12,9 @@ i{
     color: rgba(0, 0, 0);
 }
 
-footer i{
-    color:white;
-}
-
 #nav_bar{
     list-style: none;
-    background-color: white;
+    background-color: rgb(247, 220, 189);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -39,5 +40,62 @@ li a{
 }
 
 li a:hover{
-    background: rgb(0, 0, 240);
+    background: rgb(192, 161, 122);
+}
+
+#main_heading{
+    text-align: center;
+    font-size: 40px;
+}
+
+h2, h3, h4, h5, h6{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(192, 161, 122
+    );
+}
+
+.sect_r{
+    border-style: groove;
+    border-color: rgba(0, 0, 0);
+}
+
+.contents {
+    text-align: center;
+}
+
+#twm{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#track{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mov{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#me{
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30%;
+}
+
+#triv_main{
+    border: groove;
+    margin: 5px;
+}
+
+#Education {
+    margin-left: auto;
+    margin-right: auto;
 }
