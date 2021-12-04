@@ -1,28 +1,26 @@
-const { render } = require('ejs');
-const express = require('express');
+const express = require("express");
 
-const app = new express();
+const ejs = require("ejs");
+
+// Create express app
+const app = express();
 
 //Global counter
 var i = 0;
 
-// body parser
+// Initialize Body Parser Middleware to parse data sent by users in the request object
 app.use(express.json());
-app.use(express.urlencoded({extended: true})); //parse html form data
+app.use(express.urlencoded({ extended: true })); // to parse HTML form data
 
-//ejs Middleware
+// Initialize ejs Middleware
 app.set("view engine", "ejs");
-app.set("/public", express.static( __dirname + "/public"));
+app.use("/public", express.static(__dirname + "/public"));
 
 //routes 
 app.get('/', (req, res) => {
     res.render("index")
 });
 
-//cant believe im so stupid :(
-// app.get('/index', (req, res) => {
-//     res.render('../views/index.ejs')
-// });
 
 app.get('/my_resume', (req, res) => {
     res.render('../views/my_resume.ejs')
@@ -38,12 +36,6 @@ app.get('/trivia', (req, res) => {
 
 app.post('/idek', (req, res) => {
     
-    // let ans1 = document.getElementById("a1").value;
-    // let ans2 = document.getElementById("a2").value;
-    // let ans3 = document.getElementById("a3").value;
-    // let ans4 = document.getElementById("a4").value;
-    // let ans5 = document.getElementById("a5").value;
-    // let ans6 = document.getElementById("a6").value;
     let ans1 = req.body.a1
     let ans2 = req.body.a2
     let ans3 = req.body.a3
