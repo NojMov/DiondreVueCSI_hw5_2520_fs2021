@@ -1,0 +1,29 @@
+{
+  "name": "csi2520_hw5",
+  "version": "1.0.0",
+  "description": "hw5",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NojMov/DiondreVueCSI_hw5_2520_fs2021.git"
+  },
+  "keywords": [
+    "ejs"
+  ],
+  "author": "Dondre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NojMov/DiondreVueCSI_hw5_2520_fs2021/issues"
+  },
+  "homepage": "https://github.com/NojMov/DiondreVueCSI_hw5_2520_fs2021#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15"
+  }
+}
